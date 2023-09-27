@@ -28,6 +28,11 @@ const port = process.env.PORT || "3001";
 // RUTAS
 app.use("/api", require("./routes"))
 
+
+app.get("/",(req, res) => {
+    res.send({ data: "Api de tracks, con esta api podras tener tus canciones preferidas, subirlas, obtenerlas y eliminarlas, funciona con auth" });
+})
+
 app.listen(port, () => {
   console.log("Puerto " + port);
 });
